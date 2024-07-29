@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bomb Timer</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+        #bomb {
+            width: 80vw; /* Viewport width의 80% */
+            height: 80vh; /* Viewport height의 80% */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+    <script>
+        function startRandomTimer() {
+            var timerLength = Math.floor(Math.random() * (60 - 10 + 1)) + 10; // 10초에서 60초 사이
+            var startTime = Date.now();
+            var bombElement = document.getElementById('bomb');
+            bombElement.style.backgroundImage = "url('bomb.gif')"; // 폭탄 이미지 파일 이름
+
+            var interval = setInterval(function() {
+                var elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+                var remainingTime = timerLength - elapsedTime;
+                if (remainingTime <= 0) {
+                    clearInterval(interval);
+                    bombElement.style.backgroundImage = "url('explosion.gif')"; // 폭발 이미지 파일 이름
+                }
+            }, 100);
+        }
+    </script>
+</head>
+<body onload="startRandomTimer()">
+    <div id="bomb"></div>
+</body>
+</html>
