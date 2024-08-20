@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폭탄 게임 - 폭발</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <img id="explosionImage" src="explosion.gif" alt="폭발 이미지" class="responsive-image">
+        <button id="retryButton">다시하기</button>
+    </div>
+    <script>
+        // 페이지 로드 시 자동으로 전환되지 않도록 변경
+        // "다시하기" 버튼 클릭 시 index.html로 이동
+        document.getElementById('retryButton').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

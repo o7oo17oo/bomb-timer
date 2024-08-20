@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폭탄 게임 - 진행 중</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <img id="movingImage" src="moving_bomb.gif" alt="움직이는 폭탄 이미지" class="responsive-image">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const randomTime = Math.floor(Math.random() * (180000 - 10000)) + 10000;
+
+            setTimeout(() => {
+                window.location.href = 'page3.html';
+            }, randomTime);
+        });
+    </script>
+</body>
+</html>

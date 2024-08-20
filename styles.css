@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 스크롤을 숨깁니다 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.page img {
+    max-width: 80%;
+    height: auto;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* 원하는 최대 크기를 설정할 수 있습니다 */
+}
+
+.clickable-image {
+    cursor: pointer;
+}
+
+.page button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#explosionImage {
+    animation: explosion 1s steps(10) 1;
+}
+
+@keyframes explosion {
+    from { background-position: 0; }
+    to { background-position: -1000px; }
+}

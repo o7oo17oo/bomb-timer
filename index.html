@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폭탄 게임 - 시작</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <img src="bomb_before.png" alt="폭탄 이미지" class="responsive-image clickable-image">
+        <button id="startButton">시작</button>
+    </div>
+    <script>
+        document.querySelector('.clickable-image').addEventListener('click', () => {
+            window.location.href = 'page2.html';
+        });
+
+        document.getElementById('startButton').addEventListener('click', () => {
+            window.location.href = 'page2.html';
+        });
+    </script>
+</body>
+</html>
